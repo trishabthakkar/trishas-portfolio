@@ -20,7 +20,7 @@ Already done, so you don't re-plan it:
 
 | # | Phase | Needs from you | Status |
 |---|-------|----------------|--------|
-| 1 | Nav & scroll behavior | nothing | ⬜ |
+| 1 | Nav & scroll behavior | nothing | ✅ |
 | 2 | About section | bio notes | ⬜ |
 | 3 | Projects section | 3–5 projects | ⬜ |
 | 4 | Research section | interests/papers | ⬜ |
@@ -33,8 +33,10 @@ Already done, so you don't re-plan it:
 
 ---
 
-## Phase 1 — Nav & Scroll Behavior
+## Phase 1 — Nav & Scroll Behavior ✅
 *Goal: the nav understands the single-page home.*
+
+*Done 2026-07-04: nav links point at home anchors (reordered to match page order); scroll-spy rose pill tracks the section on screen (via a scroll listener + 30%-viewport line); `scroll-mt-28` keeps headings clear of the floating nav; mobile hides the redundant wordmark and spaces the five links evenly.*
 
 - Point nav links at home anchors (`/#about`, `/#projects`, …) instead of the separate route pages.
 - **Scroll-spy**: the rose pill highlights the section currently on screen as you scroll.
