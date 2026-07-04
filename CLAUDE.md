@@ -185,11 +185,8 @@ See `PRD.md` for full details on each phase.
 
 ---
 
-## Next Steps (finish Phase 2, then Phase 3)
+## Next Steps
 
-1. Home page polish: mobile pass on the kinetic hero (letter hover has no touch equivalent — consider a device-tilt or tap ripple), fine-tune ink-sheet scroll timing.
-2. Consider a sparkle cursor trail (rose particles) as a Phase 7 delight item.
-3. Then Phase 3 (About) using the locked system: `SectionHeading` + ink statement blocks + `Card`s.
-4. Seed real content: projects + research lists (see Open Questions).
+**`PLAN.md` is the working phase tracker** (created 2026-07-04) — 10 sequential build phases from nav scroll-spy through launch, each with status, "needs from Trisha," and done-when criteria. Work through it one phase at a time and mark phases ✅ there as they finish.
 
-To continue, just say "let's keep going" in a new session — this file has all the context needed.
+To continue, just say "let's do phase 1" (or "next phase") in a new session — PLAN.md + this file have all the context needed.
