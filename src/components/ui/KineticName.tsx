@@ -45,8 +45,8 @@ function KineticWord({
 export default function KineticName() {
   return (
     <h1
-      className="font-display font-semibold leading-[0.92] tracking-tight text-ink"
-      style={{ fontSize: "clamp(2.75rem, 9vw, 6.5rem)" }}
+      className="font-display font-semibold leading-[0.9] tracking-tight text-ink"
+      style={{ fontSize: "clamp(3.25rem, 12vw, 9.75rem)" }}
       aria-label="trisha thakkar"
     >
       <span aria-hidden className="flex flex-col items-center">

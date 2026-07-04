@@ -60,8 +60,8 @@ export default function Home() {
             transition={{ delay: 0.8, duration: 0.6 }}
             className="mt-7 max-w-md text-base leading-relaxed text-ink-soft md:text-lg"
           >
-            cs + ai student at purdue, building things that sit somewhere
-            between machine learning and the web.
+            cs + ai @ purdue. i like experimenting with ai/ml and full stack
+            development, and building things that sit somewhere in between.
           </motion.p>
 
           {/* CONTACT RAIL — surfaced with the intro on the first screen */}
@@ -71,16 +71,6 @@ export default function Home() {
             transition={{ delay: 1.1, duration: 0.7 }}
             className="mt-10 flex flex-wrap items-center justify-center gap-x-5 gap-y-2 font-mono text-xs text-ink-mute"
           >
-            <span className="flex items-center gap-2">
-              <span className="relative flex h-1.5 w-1.5">
-                <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-rose opacity-60" />
-                <span className="relative inline-flex h-1.5 w-1.5 rounded-full bg-rose" />
-              </span>
-              open to collaboration
-            </span>
-            <span aria-hidden className="text-petal-deep">
-              ·
-            </span>
             {heroContactLinks.map(({ label, href }, i) => (
               <span key={label} className="flex items-center gap-x-5">
                 <a href={href} className="transition-colors hover:text-rose">
