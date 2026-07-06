@@ -5,28 +5,28 @@ import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 
 const links = [
-  { id: "home", href: "/", label: "home" },
-  { id: "about", href: "/#about", label: "about" },
   { id: "projects", href: "/#projects", label: "projects" },
-  { id: "research", href: "/#research", label: "research" },
+  { id: "experience", href: "/#experience", label: "experience" },
+  { id: "skills", href: "/#skills", label: "skills" },
+  { id: "about", href: "/about", label: "about", page: true },
   { id: "contact", href: "/#contact", label: "contact" },
 ];
 
-const sectionIds = ["about", "projects", "research", "contact"];
+const sectionIds = ["projects", "experience", "skills", "contact"];
 
 export default function NavBar() {
   const pathname = usePathname();
   const onHome = pathname === "/";
-  const [activeId, setActiveId] = useState("home");
+  const [activeId, setActiveId] = useState("");
 
   useEffect(() => {
     if (!onHome) return;
 
     const updateActive = () => {
       // the section whose top has crossed a line ~30% down the viewport wins;
-      // if none have, we're still in the hero → "home"
+      // if none have, nothing is highlighted (we're still up in the hero/intro)
       const line = window.innerHeight * 0.3;
-      let current = "home";
+      let current = "";
       for (const id of sectionIds) {
         const el = document.getElementById(id);
         if (el && el.getBoundingClientRect().top <= line) {
@@ -53,39 +53,40 @@ export default function NavBar() {
   };
 
   return (
-    <nav className="sticky top-4 z-50 mx-auto mt-4 flex w-[calc(100%-2rem)] max-w-3xl items-center justify-center rounded-full border border-petal bg-blush/80 px-3 py-2.5 backdrop-blur-md shadow-[0_2px_20px_rgba(236,64,122,0.08)] sm:justify-between sm:px-5">
-      <Link
-        href="/"
-        onClick={handleHomeClick}
-        className="hidden font-display text-lg font-semibold tracking-tight text-ink sm:block"
-      >
-        trisha
-      </Link>
-      <ul className="flex items-center gap-1 text-sm sm:gap-1">
-        {links.map(({ id, href, label }) => {
-          const active = onHome && activeId === id;
-          return (
-            <li key={id} className="relative">
-              <Link
-                href={href}
-                onClick={id === "home" ? handleHomeClick : undefined}
-                className={`relative z-10 rounded-full px-1.5 py-1.5 transition-colors sm:px-3 ${
-                  active ? "text-blush" : "text-ink-soft hover:text-rose"
-                }`}
-              >
-                {label}
-              </Link>
-              {active && (
-                <motion.span
-                  layoutId="nav-pill"
-                  className="absolute inset-0 rounded-full bg-rose"
-                  transition={{ type: "spring", stiffness: 400, damping: 32 }}
-                />
-              )}
-            </li>
-          );
-        })}
-      </ul>
+    <nav className="sticky top-0 z-50 border-b border-petal bg-blush/80 backdrop-blur-md">
+      <div className="mx-auto flex max-w-6xl items-center justify-center px-6 sm:justify-between md:px-8">
+        <Link
+          href="/"
+          onClick={handleHomeClick}
+          className="hidden py-4 font-display text-lg font-semibold tracking-tight text-ink sm:block"
+        >
+          trisha
+        </Link>
+        <ul className="flex items-center gap-0.5 text-sm sm:gap-2">
+          {links.map(({ id, href, label, page }) => {
+            const active = page ? pathname === href : onHome && activeId === id;
+            return (
+              <li key={id} className="relative">
+                <Link
+                  href={href}
+                  className={`relative block px-2 py-4 transition-colors sm:px-3 ${
+                    active ? "text-ink" : "text-ink-mute hover:text-rose"
+                  }`}
+                >
+                  {label}
+                </Link>
+                {active && (
+                  <motion.span
+                    layoutId="nav-underline"
+                    className="absolute inset-x-2 bottom-0 h-0.5 rounded-full bg-rose sm:inset-x-3"
+                    transition={{ type: "spring", stiffness: 400, damping: 32 }}
+                  />
+                )}
+              </li>
+            );
+          })}
+        </ul>
+      </div>
     </nav>
   );
 }

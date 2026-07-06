@@ -21,9 +21,10 @@ Already done, so you don't re-plan it:
 | # | Phase | Needs from you | Status |
 |---|-------|----------------|--------|
 | 1 | Nav & scroll behavior | nothing | ✅ |
-| 2 | About section | bio notes | ⬜ |
-| 3 | Projects section | 3–5 projects | ⬜ |
-| 4 | Research section | interests/papers | ⬜ |
+| — | Home restructure + sections + /about page | real content | 🟡 layouts built, placeholders in |
+| 2 | About section | bio notes | 🟡 layout done |
+| 3 | Projects section | real projects + links | 🟡 layout done |
+| 4 | Research section | — | ⬜ dropped (not in current structure) |
 | 5 | Contact, for real | handles + form choice | ⬜ |
 | 6 | Route cleanup | one decision | ⬜ |
 | 7 | Motion & delight | taste reactions | ⬜ |
@@ -32,6 +33,16 @@ Already done, so you don't re-plan it:
 | 10 | Launch | domain + accounts | ⬜ |
 
 ---
+
+## Home Restructure (2026-07-04) 🟡
+*Big redesign per Trisha's direction — layouts built, placeholder content in.*
+
+- Killed the ink "menu"/index panel. Home now flows **hero → ink "about me" intro (2 paragraphs, keeps the slide-up reveal) → projects → experience → skills → contact (ink)**. Mostly light with the two ink bookends.
+- **Projects** = placecards (`src/data/projects.ts`): context caption, name, blurb, tech tags, external-link arrow; each card hyperlinks out (`href` = devpost/site — currently `#`).
+- **Experience** (`src/data/experience.ts`) = drawing timeline. **Skills** (`src/data/skills.ts`) = category cards with meter bars that fill on scroll. Unique animation per section.
+- Separate **`/about` page**: hobbies (pill cloud), community service (cards), fun facts (grid) — all placeholder copy.
+- Research dropped from home + nav (route stub still orphaned → phase 6).
+- **Still needs from Trisha:** real project data + links, real experience/skills, real bio + about-page copy. All in `src/data/*` and the intro/about files, clearly marked as placeholders.
 
 ## Phase 1 — Nav & Scroll Behavior ✅
 *Goal: the nav understands the single-page home.*
