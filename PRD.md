@@ -1,8 +1,10 @@
 # Trisha's Portfolio — Master Build Plan
 
 **Owner:** Trisha Thakkar (CS + AI @ Purdue · thakkart@purdue.edu)
-**Last updated:** 2026-07-04
-**Status:** Design exploration (Track 1)
+**Last updated:** 2026-07-06
+**Status:** Track 2 — build underway. Design is **locked**; **`PLAN.md` is the working phase tracker** (this doc is the fuller vision/reference).
+
+> **Progress at a glance (2026-07-06):** Track 1 (design) is complete — "soft power" locked. Nav + all section *layouts* are built (home: hero → about intro → projects → experience → skills → contact; plus a separate `/about` page), running on **placeholder content**. Repo is on GitHub. Officially only **Phase 1 (nav)** is signed off — remaining work is real content → polish → launch, tracked in `PLAN.md`.
 
 ---
 
@@ -42,16 +44,24 @@
 ### Direction chosen (2026-07-04)
 - **Kept the original "soft power" design** over all four `/lab` variations. Pink stays; blush + ink + rose, Fraunces display, kinetic name, continuous-scroll home. Design exploration (Track 1) is closed — moving to Track 2 build.
 
-### Still open (we'll answer these inside the phases)
-- [ ] **Site architecture** — pure single-page, or single-page home + separate deep-dive pages for individual projects (Phase 6)
-- [ ] **Photo, illustrated avatar, or neither** (Phase 3 / Phase 11)
-- [ ] **Which 3–5 projects + research to seed** (Phase 20)
-- [ ] **Social links** (GitHub, LinkedIn handles) for the contact section
-- [ ] **Domain name** (Phase 22)
+### Structure decisions since locked (2026-07-06)
+- **Research dropped** from the home + nav (route stub still orphaned → cleanup phase). Can return as a section later if wanted.
+- **Home lineup:** hero → ink "about me" intro → projects → experience → skills → contact. Personal content (hobbies · community · fun facts) lives on a separate **`/about`** page.
+- **Single-page home** confirmed; old `/projects` `/research` `/contact` route stubs are orphaned pending cleanup.
+
+### Still open (answered inside the remaining phases — see `PLAN.md`)
+- [ ] **Real content** — projects (+ links), experience, skills, bio, about-page copy *(PLAN phases 2–4)*
+- [ ] **Photo of you, or stay typographic** *(PLAN phase 4)*
+- [ ] **Social links** — GitHub + LinkedIn handles *(PLAN phase 5)*
+- [ ] **Contact form?** Resend vs. Formspree *(PLAN phase 5)*
+- [ ] **Skills display** — keep proficiency meter bars, or plain tag chips *(PLAN phase 3)*
+- [ ] **Domain name** — `trishathakkar.com` / `trisha.dev` / `trisha.space` / other *(PLAN phase 10)*
 
 ---
 
-# TRACK 1 — DESIGN (iterate until you love it)
+# TRACK 1 — DESIGN (iterate until you love it) — ✅ COMPLETE (2026-07-04)
+
+*Design is locked: "soft power" chosen over the `/lab` variations. The phases below are kept as a record of how we got there; no action left in Track 1.*
 
 ## Phase 1 — Discovery & Direction
 *Goal: agree on the personality before touching pixels.*
@@ -107,7 +117,9 @@
 
 ---
 
-# TRACK 2 — BUILD (only after the design is loved)
+# TRACK 2 — BUILD — 🟡 IN PROGRESS
+
+*The phase numbers below are the original superset vision. Live, **`PLAN.md` is the source of truth** for what's done and what's next (its 10 phases are a re-scoped, current subset of the ones below). Quick reconciliation: foundation/nav/hero + about/projects layouts = **built**; experience & skills sections = **added & built**; research = **dropped**; everything is on **placeholder content** pending the content + polish + launch phases.*
 
 ## Phase 8 — Foundation & Architecture
 - Finalize single-page continuous-scroll structure + anchor/scroll-spy nav.
@@ -188,4 +200,4 @@
 
 ---
 
-*To start, say "let's do phase 1" and we'll begin the moodboard + direction exploration.*
+*Design & layouts are done. To move forward, work from **`PLAN.md`** — next up is **Phase 2: Real Projects.** Send your projects (name · context · blurb · tech · link) and I'll wire them in.*
