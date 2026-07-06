@@ -1,5 +1,3 @@
-// PLACEHOLDER DATA — replace with your real roles. Layout is final.
-
 export type Experience = {
   org: string;
   role: string;
@@ -9,24 +7,17 @@ export type Experience = {
 
 export const experience: Experience[] = [
   {
-    org: "xrcise meet",
-    role: "frontend intern",
-    period: "may 2026 — present",
+    org: "zealogics technologies",
+    role: "ai software engineering intern",
+    period: "june 2026 — aug 2026",
     blurb:
-      "building frontend interfaces for a fitness product — clean flows, responsive ui, and feature polish.",
+      "building a full-stack ai knowledge assistant — a rag pipeline with hybrid semantic + keyword search, mcp tool-calling, jwt-secured multi-user access, and an admin dashboard to keep an eye on it all.",
   },
   {
-    org: "thought gps",
-    role: "product management intern",
-    period: "may 2026 — present",
+    org: "collabera digital",
+    role: "c# programming intern",
+    period: "2024",
     blurb:
-      "translating user needs into organized requirements, feature priorities, and clearer cross-team communication.",
-  },
-  {
-    org: "rising up together",
-    role: "technical management director",
-    period: "nov 2025 — may 2026",
-    blurb:
-      "mentored teammates, ran scheduling and comms, and helped rebuild a secure, accessible nonprofit site.",
+      "analyzed the c# algorithms behind the company's web app and shadowed the engineering team's testing and debugging workflows.",
   },
 ];

@@ -1,5 +1,7 @@
-// PLACEHOLDER DATA — swap names/blurbs/tags with your real projects and set
-// each `href` to the devpost or project-site link. Layout is final.
+// Real projects. TODO(trisha): solfit + hera point at your devpost profile
+// (they're hackathon builds) and foodsaver points at your github profile
+// (personal project) as interim links — swap in each project's direct
+// devpost/repo/live link whenever you have them.
 
 export type Project = {
   name: string;
@@ -11,45 +13,27 @@ export type Project = {
 
 export const projects: Project[] = [
   {
-    name: "aurora",
-    context: "1st place · spring hackathon",
-    blurb: "paste a url and watch ai agents stress-test your site. built solo, overnight.",
-    tags: ["Next.js", "FastAPI", "Playwright", "Modal", "Claude"],
-    href: "#",
+    name: "solfit",
+    context: "mlh best use of solana + best use of auth0",
+    blurb:
+      "a decentralized fitness app with real-money wager pools on solana — an esp32 sensor and computer vision verify every rep before the smart contract pays out.",
+    tags: ["React", "Node.js", "Solana", "WebSockets", "MediaPipe"],
+    href: "https://devpost.com/trishabthakkar/",
   },
   {
-    name: "polymer",
-    context: "shipped to 500+ users",
-    blurb: "conditional, voice-native trade execution for prediction markets.",
-    tags: ["Next.js", "LiveKit", "Zustand", "TypeScript"],
-    href: "#",
+    name: "hera",
+    context: "3rd place overall · innovateher",
+    blurb:
+      "scrapes sec filings and news into snowflake, then uses cortex ai to flag compliance risks and match consumer spending against insider activity.",
+    tags: ["Python", "Snowflake", "TypeScript", "Express", "MongoDB"],
+    href: "https://devpost.com/trishabthakkar/",
   },
   {
-    name: "herizon",
-    context: "1st place · innovateher",
-    blurb: "a gamified stem career museum for young women exploring the field.",
-    tags: ["Next.js", "Gemini", "ElevenLabs", "MongoDB"],
-    href: "#",
-  },
-  {
-    name: "aide",
-    context: "4th place · purdue hackathon",
-    blurb: "paste code in your editor and get a quiz on it, instantly.",
-    tags: ["JavaScript", "Node.js", "OpenAI", "VS Code API"],
-    href: "#",
-  },
-  {
-    name: "vtol drone",
-    context: "autonomous hybrid aircraft",
-    blurb: "hybrid vtol drone with autonomous flight — full cad and a custom flight-controller pcb.",
-    tags: ["ArduPilot", "Fusion 360", "PCB", "C++"],
-    href: "#",
-  },
-  {
-    name: "stickx cane",
-    context: "smart assistive device",
-    blurb: "a smart cane built from salvaged parts for a neighbor. tested blindfolded.",
-    tags: ["Arduino", "IoT", "GPS", "3D Printing"],
-    href: "#",
+    name: "foodsaver",
+    context: "personal project",
+    blurb:
+      "ocrs your grocery receipts into a live inventory, then nudges you before food expires and suggests recipes to use it up.",
+    tags: ["React", "Firebase", "Google Cloud Vision", "OpenFoodFacts API"],
+    href: "https://github.com/trishabthakkar",
   },
 ];

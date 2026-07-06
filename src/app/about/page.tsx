@@ -17,19 +17,14 @@ const hobbies = [
 
 const service = [
   {
-    org: "rising up together",
-    role: "technical lead & mentor",
-    blurb: "rebuilt a secure, accessible nonprofit site and mentored the team behind it.",
+    org: "girls who code",
+    role: "logistics officer",
+    blurb: "aug 2025 — present · helping run the logistics behind workshops that get more girls building things early.",
   },
   {
-    org: "women in tech @ purdue",
-    role: "volunteer",
-    blurb: "helping run workshops that get more girls building things early.",
-  },
-  {
-    org: "community placeholder",
-    role: "your role",
-    blurb: "add a line about the service work that matters to you.",
+    org: "cswn",
+    role: "marketing director",
+    blurb: "aug 2025 — present · leading marketing for the computer science women's network at purdue.",
   },
 ];
 

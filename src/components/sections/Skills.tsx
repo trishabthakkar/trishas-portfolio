@@ -9,11 +9,11 @@ export default function Skills() {
       <div className="mx-auto max-w-6xl">
         <SectionHeading label="what i work with" title="skills" />
         <p className="-mt-6 mb-12 max-w-prose text-ink-soft">
-          the languages, tools, and workflows i reach for across ml, the web, and
-          hardware.
+          the languages, tools, and ai systems i reach for building full-stack
+          apps and research tooling.
         </p>
 
-        <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {skills.map((group, gi) => (
             <motion.div
               key={group.title}

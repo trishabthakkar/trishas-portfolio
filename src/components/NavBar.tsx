@@ -7,12 +7,13 @@ import { useEffect, useState } from "react";
 const links = [
   { id: "projects", href: "/#projects", label: "projects" },
   { id: "experience", href: "/#experience", label: "experience" },
+  { id: "research", href: "/#research", label: "research" },
   { id: "skills", href: "/#skills", label: "skills" },
   { id: "about", href: "/about", label: "about", page: true },
   { id: "contact", href: "/#contact", label: "contact" },
 ];
 
-const sectionIds = ["projects", "experience", "skills", "contact"];
+const sectionIds = ["projects", "experience", "research", "skills", "contact"];
 
 export default function NavBar() {
   const pathname = usePathname();
@@ -54,7 +55,7 @@ export default function NavBar() {
 
   return (
     <nav className="sticky top-0 z-50 border-b border-petal bg-blush/80 backdrop-blur-md">
-      <div className="mx-auto flex max-w-6xl items-center justify-center px-6 sm:justify-between md:px-8">
+      <div className="mx-auto flex max-w-6xl items-center justify-center px-2 sm:justify-between sm:px-6 md:px-8">
         <Link
           href="/"
           onClick={handleHomeClick}
@@ -62,14 +63,14 @@ export default function NavBar() {
         >
           trisha
         </Link>
-        <ul className="flex items-center gap-0.5 text-sm sm:gap-2">
+        <ul className="flex items-center gap-0 text-[11px] sm:gap-2 sm:text-sm">
           {links.map(({ id, href, label, page }) => {
             const active = page ? pathname === href : onHome && activeId === id;
             return (
               <li key={id} className="relative">
                 <Link
                   href={href}
-                  className={`relative block px-2 py-4 transition-colors sm:px-3 ${
+                  className={`relative block px-1.5 py-4 transition-colors sm:px-3 ${
                     active ? "text-ink" : "text-ink-mute hover:text-rose"
                   }`}
                 >

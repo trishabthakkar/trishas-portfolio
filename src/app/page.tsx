@@ -4,13 +4,15 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import KineticName from "@/components/ui/KineticName";
 import Projects from "@/components/sections/Projects";
 import Experience from "@/components/sections/Experience";
+import Research from "@/components/sections/Research";
 import Skills from "@/components/sections/Skills";
 import Contact from "@/components/sections/Contact";
 
 const heroContactLinks = [
   { label: "email", href: "mailto:thakkart@purdue.edu" },
-  { label: "github", href: "#" },
-  { label: "linkedin", href: "#" },
+  { label: "github", href: "https://github.com/trishabthakkar" },
+  { label: "linkedin", href: "https://www.linkedin.com/in/trisha-thakkar/" },
+  { label: "devpost", href: "https://devpost.com/trishabthakkar/" },
 ];
 
 export default function Home() {
@@ -61,7 +63,12 @@ export default function Home() {
           >
             {heroContactLinks.map(({ label, href }, i) => (
               <span key={label} className="flex items-center gap-x-5">
-                <a href={href} className="transition-colors hover:text-rose">
+                <a
+                  href={href}
+                  target={href.startsWith("http") ? "_blank" : undefined}
+                  rel={href.startsWith("http") ? "noopener noreferrer" : undefined}
+                  className="transition-colors hover:text-rose"
+                >
                   {label}
                 </a>
                 {i < heroContactLinks.length - 1 && (
@@ -135,6 +142,7 @@ export default function Home() {
 
       <Projects />
       <Experience />
+      <Research />
       <Skills />
       <Contact />
     </div>
