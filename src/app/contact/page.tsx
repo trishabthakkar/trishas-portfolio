@@ -9,7 +9,7 @@ export default function ContactPage() {
         i&apos;d love to hear from you — whether it&apos;s about collaborating, research, or
         just saying hi.
       </p>
-      <Button href="mailto:mitta143@purdue.edu">mitta143@purdue.edu</Button>
+      <Button href="mailto:thakkart@purdue.edu">thakkart@purdue.edu</Button>
       <p className="mt-10 italic text-ink-mute">full contact form coming soon</p>
     </div>
   );

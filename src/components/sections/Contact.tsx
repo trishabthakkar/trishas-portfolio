@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import SectionHeading from "@/components/ui/SectionHeading";
 
 const contactLinks = [
-  { label: "email", href: "mailto:mitta143@purdue.edu", handle: "mitta143@purdue.edu" },
+  { label: "email", href: "mailto:thakkart@purdue.edu", handle: "thakkart@purdue.edu" },
   { label: "github", href: "#", handle: "add link" },
   { label: "linkedin", href: "#", handle: "add link" },
 ];

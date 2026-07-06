@@ -1,6 +1,6 @@
 # Trisha's Portfolio — Master Build Plan
 
-**Owner:** Trisha Thakkar (CS + AI @ Purdue · mitta143@purdue.edu)
+**Owner:** Trisha Thakkar (CS + AI @ Purdue · thakkart@purdue.edu)
 **Last updated:** 2026-07-04
 **Status:** Design exploration (Track 1)
 

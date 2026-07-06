@@ -8,7 +8,7 @@ import Skills from "@/components/sections/Skills";
 import Contact from "@/components/sections/Contact";
 
 const heroContactLinks = [
-  { label: "email", href: "mailto:mitta143@purdue.edu" },
+  { label: "email", href: "mailto:thakkart@purdue.edu" },
   { label: "github", href: "#" },
   { label: "linkedin", href: "#" },
 ];

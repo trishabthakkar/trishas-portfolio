@@ -6,7 +6,7 @@ This file documents everything needed to continue development across sessions wi
 
 ## Project Overview
 
-**Owner:** Trisha Thakkar — CS + AI student at Purdue (mitta143@purdue.edu)
+**Owner:** Trisha Thakkar — CS + AI student at Purdue (thakkart@purdue.edu)
 **Repo:** `~/trishas-portfolio` (local git repo, no remote yet)
 **Goal:** A creative, interactive personal portfolio website that's unmistakably Trisha's — playful, dreamy, personality-forward. More creative than reference sites [sejalm.space](https://sejalm.space/) and [bhatia.info](https://www.bhatia.info/).
 
@@ -166,7 +166,7 @@ See `PRD.md` for full details on each phase.
 
 ## Important Context
 
-- **Email:** mitta143@purdue.edu
+- **Email:** thakkart@purdue.edu
 - **Aesthetic reference:** Trisha's GitHub profile README (soft pinks, sparkles ⊹˚｡ ✿ ˚⋆, lowercase, warm voice)
 - **Stack already uses:** Python, TypeScript, JS, Java, C; PyTorch, TensorFlow, scikit-learn, pandas, NumPy; React, Next.js, Tailwind; Node.js, Express, Flask, PostgreSQL, MongoDB; Git, Docker, AWS, Figma
 - **Deployment target:** Vercel (no remote repo yet — set up GitHub remote before deploying)
