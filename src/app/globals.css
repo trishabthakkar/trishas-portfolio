@@ -3,12 +3,12 @@
 :root {
   --blush: #fff5f7;
   --petal: #ffdbe4;
-  --petal-deep: #ffb6c1;
+  --petal-deep: #e3c2c8;
   --rose: #ec407a;
   --rose-bright: #f43f7d;
-  --ink: #2b0f1e;
-  --ink-soft: #6b3651;
-  --ink-mute: #a87d92;
+  --ink: #241d20;
+  --ink-soft: #6e5860;
+  --ink-mute: #a3919a;
 }
 
 @theme inline {

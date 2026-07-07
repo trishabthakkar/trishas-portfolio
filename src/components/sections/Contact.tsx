@@ -4,6 +4,8 @@ import { motion } from "framer-motion";
 import SectionHeading from "@/components/ui/SectionHeading";
 
 const EMAIL = "thakkart@purdue.edu";
+const PHONE_DIGITS = "17654148202";
+const PHONE_DISPLAY = "+1 (765) 414-8202";
 
 const infoRows = [
   {
@@ -14,6 +16,16 @@ const infoRows = [
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6">
         <rect x="2.5" y="4.5" width="19" height="15" rx="2.5" />
         <path d="M3 6.5l9 6 9-6" />
+      </svg>
+    ),
+  },
+  {
+    label: "phone",
+    value: PHONE_DISPLAY,
+    href: `tel:+${PHONE_DIGITS}`,
+    icon: (
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6">
+        <path d="M4.5 3.5h4l2 5-2.5 1.5a12 12 0 006 6l1.5-2.5 5 2v4a2 2 0 01-2 2A17 17 0 012.5 5.5a2 2 0 012-2z" />
       </svg>
     ),
   },
@@ -80,7 +92,7 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="scroll-mt-24 rounded-[3rem] bg-ink px-6 py-24">
+    <section id="contact" className="scroll-mt-24 rounded-2xl bg-ink px-6 py-24">
       <div className="mx-auto max-w-5xl">
         <SectionHeading label="say hi" title="get in touch" dark />
 

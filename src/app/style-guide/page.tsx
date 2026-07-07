@@ -6,12 +6,12 @@ import Card from "@/components/ui/Card";
 const colors = [
   { name: "blush", className: "bg-blush border border-petal", hex: "#fff5f7", use: "page background" },
   { name: "petal", className: "bg-petal", hex: "#ffdbe4", use: "soft surfaces, borders" },
-  { name: "petal-deep", className: "bg-petal-deep", hex: "#ffb6c1", use: "accents on dark" },
+  { name: "petal-deep", className: "bg-petal-deep", hex: "#e3c2c8", use: "accents on dark" },
   { name: "rose", className: "bg-rose", hex: "#ec407a", use: "the one loud accent" },
   { name: "rose-bright", className: "bg-rose-bright", hex: "#f43f7d", use: "hover states" },
-  { name: "ink", className: "bg-ink", hex: "#2b0f1e", use: "dark sections, headings" },
-  { name: "ink-soft", className: "bg-ink-soft", hex: "#6b3651", use: "body copy" },
-  { name: "ink-mute", className: "bg-ink-mute", hex: "#a87d92", use: "labels, hints" },
+  { name: "ink", className: "bg-ink", hex: "#241d20", use: "dark sections, headings" },
+  { name: "ink-soft", className: "bg-ink-soft", hex: "#6e5860", use: "body copy" },
+  { name: "ink-mute", className: "bg-ink-mute", hex: "#a3919a", use: "labels, hints" },
 ];
 
 export default function StyleGuidePage() {

@@ -84,7 +84,7 @@ export default function Home() {
         {/* INTRO — ink panel slides up over the hero; a paragraph or two about me */}
         <div
           ref={inkRef}
-          className="relative z-10 rounded-[3rem] bg-ink px-6 py-24 shadow-[0_-20px_60px_rgba(43,15,30,0.3)] md:py-32"
+          className="relative z-10 rounded-2xl bg-ink px-6 py-24 shadow-[0_-20px_60px_rgba(36,29,32,0.3)] md:py-32"
         >
           <div className="mx-auto max-w-3xl">
             <motion.p

@@ -56,14 +56,16 @@ Live reference: the **`/style-guide`** route renders the entire system.
 |-------|-----|-----|
 | `blush` | `#fff5f7` | Page background |
 | `petal` | `#ffdbe4` | Soft surfaces, borders |
-| `petal-deep` | `#ffb6c1` | Emphasis text on dark sections |
+| `petal-deep` | `#e3c2c8` | Emphasis text on dark sections (muted 2026-07-06 — was `#ffb6c1`) |
 | `rose` | `#ec407a` | THE accent — links, CTAs, active nav |
 | `rose-bright` | `#f43f7d` | Hover states |
-| `ink` | `#2b0f1e` | Dark sections, headings |
-| `ink-soft` | `#6b3651` | Body copy |
-| `ink-mute` | `#a87d92` | Labels, hints, placeholders |
+| `ink` | `#241d20` | Dark sections, headings (muted 2026-07-06 — was `#2b0f1e`) |
+| `ink-soft` | `#6e5860` | Body copy (muted 2026-07-06 — was `#6b3651`) |
+| `ink-mute` | `#a3919a` | Labels, hints, placeholders (muted 2026-07-06 — was `#a87d92`) |
 
 Use as normal Tailwind utilities: `bg-blush`, `text-ink-soft`, `border-petal`, etc.
+
+**2026-07-06:** Trisha felt the *dark* ink sections read too pink/magenta (not the light blush background or the rose accent — those stay). Desaturated `ink`, `ink-soft`, `ink-mute`, `petal-deep` toward a muted, dusty charcoal-plum. If it still reads too pink, the next lever is `ink` itself (the darkest, most visible token).
 
 ### Typography
 - **Display:** Fraunces (`font-display`, variable axes SOFT/WONK/opsz + italic, loaded in `layout.tsx`) — all headings and big statements. Italic + `text-rose` (or `text-petal-deep` on dark) for the one word that matters.
