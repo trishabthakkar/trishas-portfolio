@@ -6,7 +6,7 @@ export default function ContactPage() {
     <div className="mx-auto max-w-4xl px-6 py-16">
       <SectionHeading label="say hi" title="contact" />
       <p className="mb-8 max-w-prose text-ink-soft">
-        i&apos;d love to hear from you — whether it&apos;s about collaborating, research, or
+        i&apos;d love to hear from you, whether it&apos;s about collaborating, research, or
         just saying hi.
       </p>
       <Button href="mailto:thakkart@purdue.edu">thakkart@purdue.edu</Button>

@@ -5,10 +5,8 @@ import SectionHeading from "@/components/ui/SectionHeading";
 import {
   MailIcon,
   PhoneIcon,
-  ClockIcon,
   GithubIcon,
   LinkedinIcon,
-  DevpostIcon,
   SendIcon,
 } from "@/components/ui/icons";
 
@@ -29,12 +27,6 @@ const infoRows = [
     href: `tel:+${PHONE_DIGITS}`,
     icon: <PhoneIcon />,
   },
-  {
-    label: "availability",
-    value: "open to internships & collaborations",
-    href: null,
-    icon: <ClockIcon />,
-  },
 ];
 
 const socials = [
@@ -47,11 +39,6 @@ const socials = [
     label: "linkedin",
     href: "https://www.linkedin.com/in/trisha-thakkar/",
     icon: <LinkedinIcon />,
-  },
-  {
-    label: "devpost",
-    href: "https://devpost.com/trishabthakkar/",
-    icon: <DevpostIcon />,
   },
 ];
 
@@ -73,7 +60,7 @@ export default function Contact() {
       `portfolio message from ${name || "someone"}`
     );
     const body = encodeURIComponent(
-      `${message}\n\n— ${name}${email ? ` (${email})` : ""}`
+      `${message}\n\n- ${name}${email ? ` (${email})` : ""}`
     );
     window.location.href = `mailto:${EMAIL}?subject=${subject}&body=${body}`;
   };
@@ -81,17 +68,17 @@ export default function Contact() {
   return (
     <section id="contact" className="scroll-mt-24 rounded-2xl bg-ink px-6 py-24">
       <div className="mx-auto max-w-5xl">
-        <SectionHeading label="say hi" title="get in touch" dark />
+        <SectionHeading title="get in touch" dark />
 
         <div className="grid gap-10 lg:grid-cols-5 lg:gap-8">
-          {/* LEFT — info + socials */}
+          {/* LEFT: info + socials */}
           <div className="lg:col-span-2">
             <motion.p
               {...fadeUp()}
               className="max-w-prose text-lg leading-relaxed text-petal-deep"
             >
-              i&apos;d love to hear from you — whether it&apos;s about
-              collaborating, research, or just saying hi.
+              open to internships and collaborations. i&apos;d love to hear
+              from you!
             </motion.p>
 
             <ul className="mt-8 space-y-5">
@@ -145,7 +132,7 @@ export default function Contact() {
             </motion.div>
           </div>
 
-          {/* RIGHT — message form (mailto fallback until a real backend is wired) */}
+          {/* RIGHT: message form (mailto fallback until a real backend is wired) */}
           <motion.div
             {...fadeUp(0.15)}
             className="rounded-3xl border border-ink-soft/40 bg-blush/5 p-6 backdrop-blur-sm sm:p-8 lg:col-span-3"
@@ -206,7 +193,7 @@ export default function Contact() {
                 send message
               </button>
               <p className="text-center text-xs text-ink-mute">
-                opens your email app with this pre-filled — nothing sends
+                opens your email app with this pre-filled. nothing sends
                 automatically.
               </p>
             </form>

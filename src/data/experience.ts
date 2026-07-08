@@ -9,9 +9,9 @@ export const experience: Experience[] = [
   {
     org: "zealogics technologies",
     role: "ai software engineering intern",
-    period: "june 2026 — aug 2026",
+    period: "june 2026 - aug 2026",
     blurb:
-      "building a full-stack ai knowledge assistant — a rag pipeline with hybrid semantic + keyword search, mcp tool-calling, jwt-secured multi-user access, and an admin dashboard to keep an eye on it all.",
+      "building a full-stack ai knowledge assistant: a rag pipeline with hybrid semantic + keyword search, mcp tool-calling, jwt-secured multi-user access, and an admin dashboard to keep an eye on it all.",
   },
   {
     org: "collabera digital",

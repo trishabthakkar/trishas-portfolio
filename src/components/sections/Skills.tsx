@@ -7,10 +7,9 @@ export default function Skills() {
   return (
     <section id="skills" className="scroll-mt-24 px-6 py-28">
       <div className="mx-auto max-w-6xl">
-        <SectionHeading label="what i work with" title="skills" />
+        <SectionHeading title="skills" />
         <p className="-mt-6 mb-12 max-w-prose text-ink-soft">
-          the languages, tools, and ai systems i reach for building full-stack
-          apps and research tooling.
+          the languages and tools i build with.
         </p>
 
         <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">

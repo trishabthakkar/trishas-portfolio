@@ -9,10 +9,10 @@ export default function Projects() {
   return (
     <section id="projects" className="scroll-mt-24 px-6 py-28">
       <div className="mx-auto max-w-6xl">
-        <SectionHeading label="things i've built" title="selected work" />
+        <SectionHeading title="projects" />
         <p className="-mt-6 mb-12 max-w-prose text-ink-soft">
-          projects across software, hardware, and ai — most of them built fast,
-          with people i like.
+          projects across software, hardware, and ai that i have built and
+          learned from.
         </p>
 
         <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
@@ -62,7 +62,7 @@ export default function Projects() {
                 ))}
               </ul>
 
-              {/* github / devpost — separate links, above the overlay */}
+              {/* github / devpost: separate links, above the overlay */}
               <div className="relative z-10 mt-4 flex items-center gap-2 border-t border-petal pt-4">
                 <a
                   href={p.githubHref}

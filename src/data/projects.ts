@@ -1,9 +1,9 @@
 // TODO(trisha): githubHref/devpostHref point at your profile pages as an
 // interim (solfit + hera are hackathon builds without a solo repo yet;
 // foodsaver is personal). Swap in each project's direct repo/devpost link
-// whenever you have them. `story` is optional — undefined until you answer
-// the 5 prompts in DEPTH-PLAN.md, then the project's /projects/[slug] page
-// upgrades from "coming soon" to the real story automatically.
+// whenever you have them. `story` is optional, undefined until you answer
+// the 4 prompts in PLAN.md (Phase 10), then the project's /projects/[slug]
+// page upgrades from "coming soon" to the real story automatically.
 
 export type ProjectStory = {
   spark: string;
@@ -15,7 +15,7 @@ export type ProjectStory = {
 export type Project = {
   slug: string;
   name: string;
-  context: string; // award / where / status — shown small above the name
+  context: string; // award / where / status, shown small above the name
   blurb: string;
   tags: string[];
   githubHref: string;
@@ -29,7 +29,7 @@ export const projects: Project[] = [
     name: "solfit",
     context: "mlh best use of solana + best use of auth0",
     blurb:
-      "a decentralized fitness app with real-money wager pools on solana — an esp32 sensor and computer vision verify every rep before the smart contract pays out.",
+      "a decentralized fitness app with real-money wager pools on solana. an esp32 sensor and computer vision verify every rep before the smart contract pays out.",
     tags: ["React", "Node.js", "Solana", "WebSockets", "MediaPipe"],
     githubHref: "https://github.com/trishabthakkar",
     devpostHref: "https://devpost.com/trishabthakkar/",

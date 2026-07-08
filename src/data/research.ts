@@ -8,15 +8,15 @@ export type ResearchItem = {
 export const research: ResearchItem[] = [
   {
     title: "spark lab",
-    detail: "student perspectives on ai research & knowledge · pi — dr. nelson",
-    period: "aug 2025 — present",
+    detail: "student perspectives on ai research & knowledge · pi: dr. nelson",
+    period: "aug 2025 - present",
     blurb:
       "designing surveys and tracking frameworks to study how student motivation shapes ai tool usage in an undergrad biology course, and how students prompt generative ai to build software.",
   },
   {
     title: "research in engineering",
-    detail: "pi — dr. bosman",
-    period: "aug 2025 — may 2026",
+    detail: "pi: dr. bosman",
+    period: "aug 2025 - may 2026",
     blurb:
       "a qualitative analysis (nvivo) of online discussions in engineering classes, presented at the fall undergraduate research symposium 2025.",
   },

@@ -24,7 +24,7 @@ const fraunces = Fraunces({
 
 export const metadata: Metadata = {
   title: "trisha thakkar",
-  description: "cs + ai student at purdue — projects, research, and more",
+  description: "cs + ai student at purdue: projects, research, and more",
 };
 
 export default function RootLayout({

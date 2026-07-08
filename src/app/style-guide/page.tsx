@@ -43,7 +43,7 @@ export default function StyleGuidePage() {
       <div className="space-y-8">
         <div>
           <p className="mb-1 text-xs tracking-widest uppercase text-ink-mute">
-            display — fraunces
+            display: fraunces
           </p>
           <p className="font-display text-6xl font-semibold tracking-tight text-ink">
             dreamy, but <em className="text-rose">bold</em>
@@ -51,7 +51,7 @@ export default function StyleGuidePage() {
         </div>
         <div>
           <p className="mb-1 text-xs tracking-widest uppercase text-ink-mute">
-            heading — fraunces semibold
+            heading: fraunces semibold
           </p>
           <p className="font-display text-3xl font-semibold text-ink">
             lowercase headings, always
@@ -59,7 +59,7 @@ export default function StyleGuidePage() {
         </div>
         <div>
           <p className="mb-1 text-xs tracking-widest uppercase text-ink-mute">
-            body — geist sans
+            body: geist sans
           </p>
           <p className="max-w-prose text-ink-soft">
             body copy is warm and first-person, set in geist for clarity.
@@ -68,7 +68,7 @@ export default function StyleGuidePage() {
         </div>
         <div>
           <p className="mb-1 text-xs tracking-widest uppercase text-ink-mute">
-            label — tracked uppercase
+            label: tracked uppercase
           </p>
           <div className="flex items-center gap-3">
             <span className="h-px w-8 bg-rose" />
@@ -101,7 +101,7 @@ export default function StyleGuidePage() {
             a project card
           </h3>
           <p className="mt-2 text-sm text-ink-soft">
-            hover me — cards lift gently and glow rose. borders are petal,
+            hover me: cards lift gently and glow rose. borders are petal,
             surfaces are translucent white over the dot grid.
           </p>
         </Card>
@@ -132,7 +132,7 @@ export default function StyleGuidePage() {
         </p>
         <Divider dark className="my-8" />
         <p className="text-sm text-ink-mute">
-          muted text stays readable — never drop below ink-mute on ink.
+          muted text stays readable, never drop below ink-mute on ink.
         </p>
       </div>
     </div>

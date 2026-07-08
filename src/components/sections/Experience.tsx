@@ -8,10 +8,7 @@ export default function Experience() {
     <section id="experience" className="scroll-mt-24 px-6 py-28">
       <div className="mx-auto grid max-w-5xl gap-10 md:grid-cols-[1fr_1.6fr]">
         <div className="md:sticky md:top-28 md:h-fit">
-          <SectionHeading label="work" title="experience" />
-          <p className="-mt-6 max-w-xs text-ink-soft">
-            where i&apos;ve been building, shipping, and learning lately.
-          </p>
+          <SectionHeading title="experience" />
         </div>
 
         {/* timeline */}

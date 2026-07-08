@@ -2,7 +2,7 @@
 import { motion } from "framer-motion";
 import SectionHeading from "@/components/ui/SectionHeading";
 
-// PLACEHOLDER CONTENT — swap the words for your real hobbies, service, and facts.
+// PLACEHOLDER CONTENT: swap the words for your real hobbies, service, and facts.
 
 const hobbies = [
   "reading sci-fi",
@@ -19,12 +19,12 @@ const service = [
   {
     org: "girls who code",
     role: "logistics officer",
-    blurb: "aug 2025 — present · helping run the logistics behind workshops that get more girls building things early.",
+    blurb: "aug 2025 - present · helping run the logistics behind workshops that get more girls building things early.",
   },
   {
     org: "cswn",
     role: "marketing director",
-    blurb: "aug 2025 — present · leading marketing for the computer science women's network at purdue.",
+    blurb: "aug 2025 - present · leading marketing for the computer science women's network at purdue.",
   },
 ];
 
@@ -64,12 +64,12 @@ export default function AboutPage() {
         {...fadeUp(0.12)}
         className="mt-6 max-w-prose text-lg leading-relaxed text-ink-soft"
       >
-        the work lives on the home page. this is everything else — what i do for
+        the work lives on the home page. this is everything else: what i do for
         fun, who i build for, and a few things that probably say more about me than
         my stack does.
       </motion.p>
 
-      {/* HOBBIES — playful pill cloud that pops in */}
+      {/* HOBBIES: playful pill cloud that pops in */}
       <section className="mt-24">
         <SectionHeading label="off the clock" title="hobbies" />
         <div className="-mt-4 flex flex-wrap gap-3">
@@ -89,7 +89,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* COMMUNITY — cards slide in from the left */}
+      {/* COMMUNITY: cards slide in from the left */}
       <section className="mt-24">
         <SectionHeading label="giving back" title="community" />
         <div className="-mt-4 space-y-4">
@@ -116,7 +116,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* FUN FACTS — grid of little cards */}
+      {/* FUN FACTS: grid of little cards */}
       <section className="mt-24">
         <SectionHeading label="the small print" title="fun facts" />
         <div className="-mt-4 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">

@@ -2,6 +2,7 @@
 import { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import KineticName from "@/components/ui/KineticName";
+import Button from "@/components/ui/Button";
 import Projects from "@/components/sections/Projects";
 import Experience from "@/components/sections/Experience";
 import Research from "@/components/sections/Research";
@@ -26,7 +27,7 @@ export default function Home() {
 
   return (
     <div>
-      {/* REVEAL SCOPE — hero stays pinned only while the ink panel slides over it */}
+      {/* REVEAL SCOPE: hero stays pinned only while the ink panel slides over it */}
       <div className="relative">
         {/* HERO */}
         <motion.section
@@ -54,7 +55,7 @@ export default function Home() {
             development, and building things that sit somewhere in between.
           </motion.p>
 
-          {/* CONTACT RAIL — surfaced with the intro on the first screen */}
+          {/* CONTACT RAIL: surfaced with the intro on the first screen */}
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -81,22 +82,12 @@ export default function Home() {
           </motion.div>
         </motion.section>
 
-        {/* INTRO — ink panel slides up over the hero; a paragraph or two about me */}
+        {/* INTRO: ink panel slides up over the hero; a paragraph or two about me */}
         <div
           ref={inkRef}
           className="relative z-10 rounded-2xl bg-ink px-6 py-24 shadow-[0_-20px_60px_rgba(36,29,32,0.3)] md:py-32"
         >
           <div className="mx-auto max-w-3xl">
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-100px" }}
-              transition={{ duration: 0.6 }}
-              className="mb-8 text-xs tracking-[0.35em] uppercase text-petal-deep"
-            >
-              about me
-            </motion.p>
-
             <motion.p
               initial={{ opacity: 0, y: 24 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -105,7 +96,7 @@ export default function Home() {
               className="font-display text-3xl leading-snug text-blush md:text-4xl md:leading-snug"
             >
               i&apos;m happiest in the space{" "}
-              <em className="text-petal-deep">between</em> things — training a model
+              <em className="text-petal-deep">between</em> things: training a model
               one week, shipping a full-stack app the next.
             </motion.p>
 
@@ -117,7 +108,7 @@ export default function Home() {
                 transition={{ delay: 0.15, duration: 0.6 }}
               >
                 i&apos;m a cs + ai student at purdue who likes living across
-                disciplines — some weeks that&apos;s machine learning, other weeks
+                disciplines: some weeks that&apos;s machine learning, other weeks
                 it&apos;s the web or a soldering iron. most of what i make starts as
                 a &ldquo;what if we just…&rdquo; and turns into something people
                 actually use.
@@ -128,11 +119,11 @@ export default function Home() {
                 viewport={{ once: true, margin: "-80px" }}
                 transition={{ delay: 0.3, duration: 0.6 }}
               >
-                i care about the small things that make software feel human — the
+                i care about the small things that make software feel human: the
                 copy, the motion, the moment something clicks. always up for
                 building with people who care as much as i do.{" "}
                 <span className="text-ink-mute">
-                  (this copy is a placeholder — make it yours.)
+                  (this copy is a placeholder. make it yours.)
                 </span>
               </motion.p>
             </div>
@@ -144,6 +135,13 @@ export default function Home() {
       <Experience />
       <Research />
       <Skills />
+
+      <div className="flex justify-center px-6 py-16">
+        <Button href="/about" variant="outline">
+          more about me →
+        </Button>
+      </div>
+
       <Contact />
     </div>
   );

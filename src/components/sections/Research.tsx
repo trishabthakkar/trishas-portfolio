@@ -7,10 +7,9 @@ export default function Research() {
   return (
     <section id="research" className="scroll-mt-24 px-6 py-28">
       <div className="mx-auto max-w-4xl">
-        <SectionHeading label="what i'm exploring" title="research" />
+        <SectionHeading title="research" />
         <p className="-mt-6 mb-12 max-w-prose text-ink-soft">
-          ongoing work and a published paper — mostly about how people learn to
-          build and use ai.
+          areas of research i am interested in and working on.
         </p>
 
         <div className="space-y-5">
