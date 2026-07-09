@@ -187,7 +187,7 @@ export default function Contact() {
 
               <button
                 type="submit"
-                className="flex w-full items-center justify-center gap-2 rounded-full bg-rose px-6 py-3.5 font-medium text-blush transition-all duration-200 hover:-translate-y-0.5 hover:bg-rose-bright hover:shadow-[0_6px_28px_rgba(236,64,122,0.45)]"
+                className="flex w-full items-center justify-center gap-2 rounded-xl bg-rose px-6 py-3.5 font-medium text-blush transition-all duration-200 hover:-translate-y-0.5 hover:bg-rose-bright hover:shadow-[0_6px_28px_rgba(236,64,122,0.45)]"
               >
                 <SendIcon className="h-4 w-4" />
                 send message

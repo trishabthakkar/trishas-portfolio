@@ -59,7 +59,7 @@ export default function NavBar() {
         <Link
           href="/"
           onClick={handleHomeClick}
-          className="hidden py-4 font-display text-lg font-semibold tracking-tight text-ink sm:block"
+          className="hidden py-4 font-display text-lg font-semibold tracking-tight text-ink italic sm:block"
         >
           trisha
         </Link>

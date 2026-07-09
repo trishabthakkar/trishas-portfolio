@@ -50,7 +50,7 @@ export default async function ProjectStoryPage({
           href={githubHref}
           target="_blank"
           rel="noopener noreferrer"
-          className="rounded-full border border-rose px-5 py-2 text-sm font-medium text-rose transition-all hover:bg-rose hover:text-blush"
+          className="rounded-xl border border-rose px-5 py-2 text-sm font-medium text-rose transition-all hover:bg-rose hover:text-blush"
         >
           github
         </a>
@@ -58,7 +58,7 @@ export default async function ProjectStoryPage({
           href={devpostHref}
           target="_blank"
           rel="noopener noreferrer"
-          className="rounded-full border border-rose px-5 py-2 text-sm font-medium text-rose transition-all hover:bg-rose hover:text-blush"
+          className="rounded-xl border border-rose px-5 py-2 text-sm font-medium text-rose transition-all hover:bg-rose hover:text-blush"
         >
           devpost
         </a>

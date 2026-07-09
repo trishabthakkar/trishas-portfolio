@@ -17,10 +17,12 @@
 - ✅ **Phase 3 — real experience & skills.** Zealogics + Collabera on the timeline; skills restructured into real resume categories with estimated levels (flagged as estimates, not self-reported).
 - ✅ **Phase 4 — research section (bonus, not originally planned).** SPARK Lab, engineering research, published paper. Wired into the nav.
 - ✅ **Phase 5 — project story pages + github/devpost icons.** Each project card now links internally to `/projects/[slug]` (a real page, not just an external bounce); GitHub + Devpost icon buttons sit under the tags and link out directly. The old `/projects` stub route now redirects to `/#projects` instead of showing "coming soon."
-- 🟡 **Phase 8 — contact, mostly real.** Email, phone, GitHub, LinkedIn, Devpost all wired and correct. Message form works via a `mailto:` fallback (not a real backend).
+- ✅ **Phase 6 — copy & structure cleanup.** Eyebrow labels trimmed, em dashes removed site-wide, "more about me" button added, dev indicator badge disabled, Collabera Digital kept on the timeline.
+- ✅ **Phase 7 — design decisions & exploration.** Wordmark → italic "trisha"; selection color softened (`petal-deep`/`ink`); border roundness kept as-is except buttons moved off the pill shape to `rounded-xl`; capitalization and signature-accent-color stayed as-is.
+- 🟡 **Contact form** — Email, phone, GitHub, LinkedIn all wired and correct. Message form works via a `mailto:` fallback (real backend is Phase 9).
 - ✅ Repo on GitHub ([trishabthakkar/trishas-portfolio](https://github.com/trishabthakkar/trishas-portfolio)) and pushed.
 
-**Next up: Phase 6** — the copy & structure cleanup (all the small text/label edits from Trisha's 2026-07-08 feedback).
+**Next up: Phase 8** — the about page overhaul.
 
 > **2026-07-08 — big feedback pass from Trisha.** Reorganized the remaining phases around her notes. The old "write project stories / real bio" phases are folded into the new content phase (10). See the **Open Decisions** section below — several phases are gated on those.
 
@@ -30,11 +32,11 @@
 
 These affect multiple phases, so we settle them as we go rather than guessing:
 
-1. **Capitalization** — keep all-lowercase, uppercase section headers, or a hybrid? (Gates Phase 6/8 copy.)
-2. **Wordmark** — what replaces "trisha" top-left? (Phase 7.)
-3. **Selection color** — currently rose. Trisha finds it "too pink" → clarify: less pink/more neutral, or bolder/more noticeable? (Phase 6/7.)
-4. **Signature accent color** — introduce an unexpected complementary color? "Neon pink glowing borders that light up on hover" idea lives here. (Phase 7 exploration.)
-5. **Border roundness** — keep / tighten / mix sharp + round? (Phase 7.)
+1. ~~Capitalization~~ — resolved 2026-07-09: keep all-lowercase everywhere. No change.
+2. ~~Wordmark~~ — resolved 2026-07-09: italic "trisha" in the nav.
+3. ~~Selection color~~ — resolved 2026-07-09: softer, less-pink pairing — `petal-deep` background, `ink` text — replacing rose/blush.
+4. ~~Signature accent color~~ — resolved 2026-07-09: keep the current soft rose hover shadow, no glow effect or second accent color.
+5. ~~Border roundness~~ — resolved 2026-07-09: keep current roundness everywhere (cards `rounded-3xl`, panels `rounded-2xl`) EXCEPT buttons, which moved off the full pill shape to a slightly-rounded rectangle (`rounded-xl`) — applies to `Button.tsx`, the contact submit button, and the github/devpost buttons on project story pages.
 6. ~~Experience timeline with only 1 internship~~ — resolved 2026-07-08: Trisha put Collabera Digital back for now, so the timeline has 2 entries again.
 7. **Community grouping** — split into Leadership / Community / Community Service, or keep one section? (Phase 8.)
 8. **"NGP TFS"** — what does it stand for + Trisha's cofounder role? (Blocks placing it. Phase 8.)
@@ -51,9 +53,9 @@ These affect multiple phases, so we settle them as we go rather than guessing:
 | 3 | Real experience & skills | — | ✅ done |
 | 4 | Research section (bonus) | — | ✅ done |
 | 5 | Project story pages + github/devpost icons | — | ✅ done |
-| 6 | Copy & structure cleanup | nothing (decision-free) | ⬜ **next** |
-| 7 | Design decisions & exploration | reactions to options | ⬜ |
-| 8 | About page overhaul | community details, NGP TFS | ⬜ |
+| 6 | Copy & structure cleanup | nothing (decision-free) | ✅ done |
+| 7 | Design decisions & exploration | reactions to options | ✅ done |
+| 8 | About page overhaul | community details, NGP TFS | ⬜ **next** |
 | 9 | Contact backend (real send) | Resend/Formspree account | ⬜ |
 | 10 | Real written content | bio para, story answers, links, research | ⬜ |
 | 11 | `/now` page (living) | what you're building/learning now | ⬜ |
@@ -83,7 +85,7 @@ These affect multiple phases, so we settle them as we go rather than guessing:
 *Each project card (`src/components/sections/Projects.tsx`) now: (a) links as a whole to `/projects/[slug]` — a real in-depth page, not an external bounce, and (b) has small GitHub + Devpost icon buttons under the tags linking out directly. The story page (`src/app/projects/[slug]/page.tsx`) renders the project's blurb + tags + links now, and will render a full spark/how-it-works/the-wall/what-i'd-change story once Phase 6 writes it — falls back gracefully to "the full story is coming soon" until then. The old `/projects` stub route redirects to `/#projects`.*
 *Note: GitHub/Devpost links currently point at your profile pages as an interim (documented in `projects.ts`) — swap in each project's direct repo/devpost link whenever you have them.*
 
-## Phase 6 — Copy & Structure Cleanup  ⬜ next
+## Phase 6 — Copy & Structure Cleanup  ✅ done
 *Goal: knock out every decision-free text/label/trim edit from the 2026-07-08 feedback in one batch. No design calls needed here.*
 
 **Global**
@@ -104,15 +106,17 @@ These affect multiple phases, so we settle them as we go rather than guessing:
 
 - **Done when:** every listed label/title/description matches the new copy, the availability/devpost bits are gone, the about button exists, and no em dashes remain in site copy.
 
-## Phase 7 — Design Decisions & Exploration  ⬜
+## Phase 7 — Design Decisions & Exploration  ✅ done
 *Goal: settle the cross-cutting visual calls, with live options where taste is involved. Resolve Open Decisions #1–#5.*
-- **Capitalization** direction (all-lowercase / uppercase headers / hybrid).
-- **Wordmark** replacing "trisha" top-left.
-- **Selection color** (`::selection` in `globals.css`) — retune per your clarification.
-- **Signature accent color + glowing/light-up borders on hover** — build 2–3 live options to react to (e.g. a neon-pink or unexpected complementary color that traces the border on hover). Ties into the roundness call.
-- **Border roundness** — keep / tighten / mix sharp + round.
-- **Needs from you:** reactions to the rendered options.
-- **Done when:** each decision is made and applied consistently via the tokens/components.
+
+Built a throwaway `/design-lab` page rendering live options for all five decisions; Trisha reviewed and chose:
+- Capitalization: keep all-lowercase (no change).
+- Wordmark: italic "trisha".
+- Selection color: softer pairing, `petal-deep` bg / `ink` text.
+- Signature accent: keep current soft rose hover shadow, no glow/second color.
+- Border roundness: keep current everywhere, except buttons moved from full pill to `rounded-xl`.
+
+`/design-lab` deleted after decisions were applied.
 
 ## Phase 8 — About Page Overhaul  ⬜
 *Goal: restructure and refresh `/about` per the feedback.*

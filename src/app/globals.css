@@ -42,8 +42,8 @@ body {
 }
 
 ::selection {
-  background: var(--rose);
-  color: var(--blush);
+  background: var(--petal-deep);
+  color: var(--ink);
 }
 
 @keyframes float {
