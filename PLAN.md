@@ -22,7 +22,7 @@
 - 🟡 **Contact form** — Email, phone, GitHub, LinkedIn all wired and correct. Message form works via a `mailto:` fallback (real backend is Phase 9).
 - ✅ Repo on GitHub ([trishabthakkar/trishas-portfolio](https://github.com/trishabthakkar/trishas-portfolio)) and pushed.
 
-**Next up: Phase 9** — the real contact backend (needs a Resend or Formspree account from you).
+**Next up: Phase 10** — real written content (home intro paragraph, project stories, research polish).
 
 > **2026-07-08 — big feedback pass from Trisha.** Reorganized the remaining phases around her notes. The old "write project stories / real bio" phases are folded into the new content phase (10). See the **Open Decisions** section below — several phases are gated on those.
 
@@ -57,7 +57,7 @@ These affect multiple phases, so we settle them as we go rather than guessing:
 | 7 | Design decisions & exploration | reactions to options | ✅ done |
 | 7.5 | Card & entry layout refresh | reactions once rendered | ✅ done |
 | 8 | About page overhaul | community details, NGP TFS | ✅ done |
-| 9 | Contact backend (real send) | Resend/Formspree account | ⬜ **next** |
+| 9 | Contact backend (real send) | — | ✅ done |
 | 10 | Real written content | bio para, story answers, links, research | ⬜ |
 | 11 | `/now` page (living) | what you're building/learning now | ⬜ |
 | 12 | Notes engine (scaffold only) | nothing yet | ⬜ |
@@ -157,11 +157,12 @@ Applied 2026-07-09, then revised same day per Trisha's follow-up:
 
 Applied 2026-07-09: heading renamed, all eyebrows removed (education/hobbies/community all use bare `SectionHeading` titles, no label). New Education section added. Real hobbies list in. Community split into three labeled buckets (leadership / community / community service) with real orgs, roles, and dates. Fun facts section was drafted then **removed entirely** per Trisha's follow-up; the Team Future Shaper blurb was also trimmed to drop "founded by teenage girls."
 
-## Phase 9 — Contact Backend (Real Send)  ⬜
+## Phase 9 — Contact Backend (Real Send)  ✅ done
 *Goal: a visitor can send you a message/email directly from the site — no mailto handoff.*
-- Wire a real serverless form (Resend or Formspree — Open Decision #9) with validation, success/error states, and spam guard. Replaces the current `mailto:` fallback in `Contact.tsx`.
-- **Needs from you:** a Resend or Formspree account + API key/endpoint.
-- **Done when:** a test message submitted on the site actually reaches your inbox.
+- ~~Resend vs Formspree~~ — resolved 2026-07-09: **Formspree** (no serverless code/domain verification needed).
+- `Contact.tsx` does a real `fetch` POST to `https://formspree.io/f/xqevvgpe`, with loading/success/error UI states and a hidden honeypot field (`company`) for spam.
+- **Verified live 2026-07-09:** submitted a real test message through the actual endpoint — Formspree returned 200, the site showed the "message sent!" success state. Check your inbox/Formspree dashboard to confirm delivery.
+- **Done when:** a test message submitted on the site actually reaches your inbox. ✅
 
 ## Phase 10 — Real Written Content  ⬜
 *Goal: replace the remaining placeholder prose with your real writing.*
