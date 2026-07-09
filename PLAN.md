@@ -22,7 +22,7 @@
 - 🟡 **Contact form** — Email, phone, GitHub, LinkedIn all wired and correct. Message form works via a `mailto:` fallback (real backend is Phase 9).
 - ✅ Repo on GitHub ([trishabthakkar/trishas-portfolio](https://github.com/trishabthakkar/trishas-portfolio)) and pushed.
 
-**Next up: Phase 8** — the about page overhaul.
+**Next up: Phase 9** — the real contact backend (needs a Resend or Formspree account from you).
 
 > **2026-07-08 — big feedback pass from Trisha.** Reorganized the remaining phases around her notes. The old "write project stories / real bio" phases are folded into the new content phase (10). See the **Open Decisions** section below — several phases are gated on those.
 
@@ -38,8 +38,8 @@ These affect multiple phases, so we settle them as we go rather than guessing:
 4. ~~Signature accent color~~ — resolved 2026-07-09: keep the current soft rose hover shadow, no glow effect or second accent color.
 5. ~~Border roundness~~ — resolved 2026-07-09: keep current roundness everywhere (cards `rounded-3xl`, panels `rounded-2xl`) EXCEPT buttons, which moved off the full pill shape to a slightly-rounded rectangle (`rounded-xl`) — applies to `Button.tsx`, the contact submit button, and the github/devpost buttons on project story pages.
 6. ~~Experience timeline with only 1 internship~~ — resolved 2026-07-08: Trisha put Collabera Digital back for now, so the timeline has 2 entries again.
-7. **Community grouping** — split into Leadership / Community / Community Service, or keep one section? (Phase 8.)
-8. **"NGP TFS"** — what does it stand for + Trisha's cofounder role? (Blocks placing it. Phase 8.)
+7. ~~Community grouping~~ — resolved 2026-07-09: split into Leadership / Community / Community Service, built in Phase 8.
+8. ~~"NGP TFS"~~ — resolved 2026-07-09: it's **Team Future Shaper** (an NGO, not "NGP"). Trisha co-founded it in Jan 2022 (part-time, Abu Dhabi, ongoing). Mission: empowering youth through skill-building and confidence. Belongs in the **Leadership** bucket.
 9. **Contact backend** — Resend vs Formspree for the real send-message form. (Phase 9.)
 
 ---
@@ -55,8 +55,9 @@ These affect multiple phases, so we settle them as we go rather than guessing:
 | 5 | Project story pages + github/devpost icons | — | ✅ done |
 | 6 | Copy & structure cleanup | nothing (decision-free) | ✅ done |
 | 7 | Design decisions & exploration | reactions to options | ✅ done |
-| 8 | About page overhaul | community details, NGP TFS | ⬜ **next** |
-| 9 | Contact backend (real send) | Resend/Formspree account | ⬜ |
+| 7.5 | Card & entry layout refresh | reactions once rendered | ✅ done |
+| 8 | About page overhaul | community details, NGP TFS | ✅ done |
+| 9 | Contact backend (real send) | Resend/Formspree account | ⬜ **next** |
 | 10 | Real written content | bio para, story answers, links, research | ⬜ |
 | 11 | `/now` page (living) | what you're building/learning now | ⬜ |
 | 12 | Notes engine (scaffold only) | nothing yet | ⬜ |
@@ -118,19 +119,43 @@ Built a throwaway `/design-lab` page rendering live options for all five decisio
 
 `/design-lab` deleted after decisions were applied.
 
-## Phase 8 — About Page Overhaul  ⬜
+## Phase 7.5 — Card & Entry Layout Refresh  ✅ done
+*Goal: kill the "small eyebrow line stacked on top of the big title" pattern **inside cards and timeline entries**. Section-level headings ("projects", "experience", "skills") stay exactly as they are — this is card/entry internals only. Chosen 2026-07-09 via Q&A.*
+
+**Project cards** (`src/components/sections/Projects.tsx`; apply the same treatment to the story-page header in `src/app/projects/[slug]/page.tsx` for consistency):
+- **Name leads.** The project name (`p.name`) is the first/top element.
+- The award/context line (`p.context`, e.g. *"mlh best use of solana + best use of auth0"*) becomes a **small badge/pill tucked in a corner** of the card — no longer a full-width line above the title.
+- Make the badge **conditional** — not every project has an award; render nothing if `context` is empty.
+- Keep the existing `→` hover affordance (it signals the card links to the story page); reconcile its placement with the badge so they don't collide.
+
+**Experience** (`src/components/sections/Experience.tsx`):
+- **Role is the big display title** (unchanged as the headline).
+- **Remove the org eyebrow** currently stacked on top of the role.
+- Add a **resume-style meta row** under the role: **date left-aligned, org right-aligned** (`flex justify-between`, mono, muted). Then the blurb below.
+
+**Skills** (`src/components/sections/Skills.tsx`): **keep the animated bars as-is** — no change (Trisha confirmed 2026-07-09).
+
+- **Done when:** no card or timeline entry has a small eyebrow stacked over its title; project cards lead with the name; experience entries use role-big + a resume-style meta row; section headings untouched; skills bars unchanged.
+
+Applied 2026-07-09, then revised same day per Trisha's follow-up:
+- **Project cards & story page:** name is now the big heading on top (with the `→` hover arrow beside it, same row); the award/context line sits small underneath, mono/rose, conditional on `p.context` being non-empty. (First pass tried a corner-badge pill — reverted, this row-based version is what stuck.)
+- **Experience:** role is still the big heading; the meta row underneath reads **org (left) → date (right)**, mono/muted, org in rose. (First pass had date-left/org-right — swapped per Trisha's correction.)
+- **Skills:** bars unchanged, as planned.
+
+## Phase 8 — About Page Overhaul  ✅ done
 *Goal: restructure and refresh `/about` per the feedback.*
 - Rename heading **"beyond the résumé" → "more about me"**; remove the "the rest of me" eyebrow and all section eyebrow labels (off the clock / giving back / the small print).
 - **New: Education** section — Purdue University, B.S. in Computer Science and AI.
 - **Hobbies (real):** swimming · reading · chasing good coffee · f1 on the weekends · baking (badly) · long walks + music · trying new cuisines.
-- **Community restructure** (Open Decision #7) — likely three buckets:
-  - **Leadership:** CSWN (marketing director), Girls Who Code (logistics officer), cofounder of **NGP TFS** *(Open Decision #8 — need full name + role)*.
+- **Community restructure** (Open Decision #7) — three buckets, real data below:
+  - **Leadership:** CSWN (marketing director); Girls Who Code (logistics officer); co-founder, **Team Future Shaper** (an NGO — Jan 2022-present, Abu Dhabi, part-time; teenage-girl-founded org empowering youth through skill-building/confidence work: webinars, weekly online classes for underprivileged kids in India, blood donation + community-event volunteering).
   - **Community / orgs:** **WISP** (Women in Science Program — member since Aug 2025, mentor from May 2026); **RTC** (Rewrite the Code — member).
-  - **Community service:** Food Finders (Lafayette); UAE service work *(pull from LinkedIn)*.
+  - **Community service:** **Food Finders** (Lafayette food bank — volunteer, ongoing, weekend shifts helping organize food and providing customer service); **Emirates Environmental Group** (student volunteer, Mar 2022 - Aug 2025 — recurring Paper Walk clean-ups, 1,000+ kg of waste paper/plastic recycled); **Volunteering.ae** (licensed volunteer, Aug 2023 - Aug 2025 — book-recycling drive, 500kg collected, + meal distribution for underprivileged workers).
 - **Fun facts:** make **smaller / less prominent**; revise content (drop "always down for a hackathon," "fueled by coffee+deadlines," etc.).
 - **Formatting refresh** of the whole page's layout.
-- **Needs from you:** NGP TFS details, UAE service specifics, revised fun-fact content.
 - **Done when:** the page reflects the new structure and real content, no placeholder items remain.
+
+Applied 2026-07-09: heading renamed, all eyebrows removed (education/hobbies/community all use bare `SectionHeading` titles, no label). New Education section added. Real hobbies list in. Community split into three labeled buckets (leadership / community / community service) with real orgs, roles, and dates. Fun facts section was drafted then **removed entirely** per Trisha's follow-up; the Team Future Shaper blurb was also trimmed to drop "founded by teenage girls."
 
 ## Phase 9 — Contact Backend (Real Send)  ⬜
 *Goal: a visitor can send you a message/email directly from the site — no mailto handoff.*

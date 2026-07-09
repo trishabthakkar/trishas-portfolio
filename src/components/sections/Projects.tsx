@@ -32,22 +32,23 @@ export default function Projects() {
                 aria-label={`read the story behind ${p.name}`}
               />
 
-              <div className="mb-4 flex items-start justify-between gap-3">
-                <p className="font-mono text-xs leading-relaxed text-rose">
-                  {p.context}
-                </p>
+              <div className="mb-2 flex items-start justify-between gap-3">
+                <h3 className="font-display text-2xl font-semibold text-ink transition-colors group-hover:text-rose">
+                  {p.name}
+                </h3>
                 <span
                   aria-hidden
-                  className="mt-0.5 shrink-0 text-ink-mute transition-all duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-rose"
+                  className="mt-1.5 shrink-0 text-ink-mute transition-all duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-rose"
                 >
                   →
                 </span>
               </div>
-
-              <h3 className="font-display text-2xl font-semibold text-ink transition-colors group-hover:text-rose">
-                {p.name}
-              </h3>
-              <p className="mt-2 flex-1 text-sm leading-relaxed text-ink-soft">
+              {p.context && (
+                <p className="mb-3 font-mono text-xs leading-relaxed text-rose">
+                  {p.context}
+                </p>
+              )}
+              <p className="flex-1 text-sm leading-relaxed text-ink-soft">
                 {p.blurb}
               </p>
 

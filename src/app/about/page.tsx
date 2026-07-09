@@ -2,39 +2,76 @@
 import { motion } from "framer-motion";
 import SectionHeading from "@/components/ui/SectionHeading";
 
-// PLACEHOLDER CONTENT: swap the words for your real hobbies, service, and facts.
-
 const hobbies = [
-  "reading sci-fi",
+  "swimming",
+  "reading",
   "chasing good coffee",
-  "sketching ui for fun",
-  "f1 on sundays",
+  "f1 on the weekends",
   "baking (badly)",
-  "long walks + podcasts",
-  "thrifting",
-  "trying new recipes",
+  "long walks + music",
+  "trying new cuisines",
 ];
 
-const service = [
+type CommunityItem = {
+  org: string;
+  role: string;
+  blurb: string;
+};
+
+const leadership: CommunityItem[] = [
+  {
+    org: "cswn",
+    role: "marketing director",
+    blurb: "aug 2025 - present · leading marketing for the computer science women's network at purdue.",
+  },
   {
     org: "girls who code",
     role: "logistics officer",
     blurb: "aug 2025 - present · helping run the logistics behind workshops that get more girls building things early.",
   },
   {
-    org: "cswn",
-    role: "marketing director",
-    blurb: "aug 2025 - present · leading marketing for the computer science women's network at purdue.",
+    org: "team future shaper",
+    role: "co-founder",
+    blurb:
+      "jan 2022 - present · an ngo in abu dhabi that empowers youth through skill-building and confidence work: webinars, weekly online classes for underprivileged kids in india, and community volunteering.",
   },
 ];
 
-const facts = [
-  { label: "currently", value: "building this very site" },
-  { label: "learning", value: "how to make motion feel effortless" },
-  { label: "always", value: "down for a hackathon" },
-  { label: "secretly", value: "a typography nerd" },
-  { label: "fueled by", value: "chai + deadlines" },
-  { label: "dream project", value: "something that helps people" },
+const community: CommunityItem[] = [
+  {
+    org: "wisp",
+    role: "member, mentor",
+    blurb: "member since aug 2025, mentor starting may 2026 · purdue's women in science program.",
+  },
+  {
+    org: "rtc",
+    role: "member",
+    blurb: "rewrite the code · a community for women in tech.",
+  },
+];
+
+const communityService: CommunityItem[] = [
+  {
+    org: "food finders",
+    role: "volunteer",
+    blurb: "ongoing · weekend shifts at the lafayette food bank, organizing food and helping at the front desk.",
+  },
+  {
+    org: "emirates environmental group",
+    role: "student volunteer",
+    blurb: "mar 2022 - aug 2025 · recurring paper walk clean-ups across abu dhabi, 1,000+ kg of waste paper and plastic recycled.",
+  },
+  {
+    org: "volunteering.ae",
+    role: "licensed volunteer",
+    blurb: "aug 2023 - aug 2025 · a book-recycling drive (500kg collected) and meal distribution for underprivileged workers.",
+  },
+];
+
+const communityGroups = [
+  { title: "leadership", items: leadership },
+  { title: "community", items: community },
+  { title: "community service", items: communityService },
 ];
 
 const fadeUp = (delay = 0) => ({
@@ -48,20 +85,14 @@ export default function AboutPage() {
   return (
     <div className="mx-auto max-w-4xl px-6 py-20">
       {/* intro */}
-      <motion.p
-        {...fadeUp()}
-        className="mb-4 text-xs tracking-[0.35em] uppercase text-ink-mute"
-      >
-        the rest of me
-      </motion.p>
       <motion.h1
-        {...fadeUp(0.05)}
+        {...fadeUp()}
         className="font-display text-5xl font-semibold tracking-tight text-ink md:text-6xl"
       >
-        beyond the <em className="text-rose">résumé</em>
+        more about <em className="text-rose">me</em>
       </motion.h1>
       <motion.p
-        {...fadeUp(0.12)}
+        {...fadeUp(0.08)}
         className="mt-6 max-w-prose text-lg leading-relaxed text-ink-soft"
       >
         the work lives on the home page. this is everything else: what i do for
@@ -69,9 +100,30 @@ export default function AboutPage() {
         my stack does.
       </motion.p>
 
+      {/* EDUCATION */}
+      <section className="mt-24">
+        <SectionHeading title="education" />
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-50px" }}
+          transition={{ duration: 0.5 }}
+          className="-mt-4 rounded-3xl border border-petal bg-white/60 p-6 backdrop-blur-sm"
+        >
+          <div className="flex flex-wrap items-baseline justify-between gap-2">
+            <h3 className="font-display text-xl font-semibold text-ink">
+              purdue university
+            </h3>
+            <span className="font-mono text-xs uppercase tracking-wider text-rose">
+              b.s. computer science + ai
+            </span>
+          </div>
+        </motion.div>
+      </section>
+
       {/* HOBBIES: playful pill cloud that pops in */}
       <section className="mt-24">
-        <SectionHeading label="off the clock" title="hobbies" />
+        <SectionHeading title="hobbies" />
         <div className="-mt-4 flex flex-wrap gap-3">
           {hobbies.map((h, i) => (
             <motion.span
@@ -89,51 +141,38 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* COMMUNITY: cards slide in from the left */}
+      {/* COMMUNITY: grouped into leadership / community / community service */}
       <section className="mt-24">
-        <SectionHeading label="giving back" title="community" />
-        <div className="-mt-4 space-y-4">
-          {service.map((s, i) => (
-            <motion.div
-              key={s.org}
-              initial={{ opacity: 0, x: -24 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true, margin: "-50px" }}
-              transition={{ delay: i * 0.1, duration: 0.5 }}
-              className="rounded-3xl border border-petal bg-white/60 p-6 backdrop-blur-sm transition-colors hover:border-petal-deep"
-            >
-              <div className="flex flex-wrap items-baseline justify-between gap-2">
-                <h3 className="font-display text-xl font-semibold text-ink">
-                  {s.org}
-                </h3>
-                <span className="font-mono text-xs uppercase tracking-wider text-rose">
-                  {s.role}
-                </span>
+        <SectionHeading title="community" />
+        <div className="-mt-4 space-y-10">
+          {communityGroups.map((group) => (
+            <div key={group.title}>
+              <h3 className="mb-4 font-mono text-xs uppercase tracking-[0.25em] text-ink-mute">
+                {group.title}
+              </h3>
+              <div className="space-y-4">
+                {group.items.map((s, i) => (
+                  <motion.div
+                    key={s.org}
+                    initial={{ opacity: 0, x: -24 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: true, margin: "-50px" }}
+                    transition={{ delay: i * 0.1, duration: 0.5 }}
+                    className="rounded-3xl border border-petal bg-white/60 p-6 backdrop-blur-sm transition-colors hover:border-petal-deep"
+                  >
+                    <div className="flex flex-wrap items-baseline justify-between gap-2">
+                      <h4 className="font-display text-xl font-semibold text-ink">
+                        {s.org}
+                      </h4>
+                      <span className="font-mono text-xs uppercase tracking-wider text-rose">
+                        {s.role}
+                      </span>
+                    </div>
+                    <p className="mt-2 text-ink-soft">{s.blurb}</p>
+                  </motion.div>
+                ))}
               </div>
-              <p className="mt-2 text-ink-soft">{s.blurb}</p>
-            </motion.div>
-          ))}
-        </div>
-      </section>
-
-      {/* FUN FACTS: grid of little cards */}
-      <section className="mt-24">
-        <SectionHeading label="the small print" title="fun facts" />
-        <div className="-mt-4 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          {facts.map((f, i) => (
-            <motion.div
-              key={f.label}
-              initial={{ opacity: 0, y: 20, scale: 0.96 }}
-              whileInView={{ opacity: 1, y: 0, scale: 1 }}
-              viewport={{ once: true, margin: "-40px" }}
-              transition={{ delay: i * 0.07, duration: 0.5 }}
-              className="rounded-2xl border border-petal bg-white/60 p-5"
-            >
-              <p className="font-mono text-[11px] uppercase tracking-[0.2em] text-ink-mute">
-                {f.label}
-              </p>
-              <p className="mt-1.5 font-display text-lg text-ink">{f.value}</p>
-            </motion.div>
+            </div>
           ))}
         </div>
       </section>

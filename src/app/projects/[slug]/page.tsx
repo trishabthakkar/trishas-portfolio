@@ -27,12 +27,14 @@ export default async function ProjectStoryPage({
         <span aria-hidden>←</span> back to projects
       </Link>
 
-      <p className="font-mono text-xs uppercase tracking-wider text-rose">
-        {context}
-      </p>
-      <h1 className="mt-2 font-display text-5xl font-semibold tracking-tight text-ink md:text-6xl">
+      <h1 className="font-display text-5xl font-semibold tracking-tight text-ink md:text-6xl">
         {name}
       </h1>
+      {context && (
+        <p className="mt-2 font-mono text-xs uppercase tracking-wider text-rose">
+          {context}
+        </p>
+      )}
 
       <ul className="mt-5 flex flex-wrap gap-1.5">
         {tags.map((t) => (

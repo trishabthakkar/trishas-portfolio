@@ -37,15 +37,13 @@ export default function Experience() {
                   aria-hidden
                   className="absolute -left-8 top-1.5 h-2.5 w-2.5 rounded-full border-2 border-blush bg-rose"
                 />
-                <p className="font-mono text-xs uppercase tracking-wider text-rose">
-                  {e.org}
-                </p>
-                <h3 className="mt-1 font-display text-2xl font-semibold text-ink">
+                <h3 className="font-display text-2xl font-semibold text-ink">
                   {e.role}
                 </h3>
-                <p className="mt-1 font-mono text-xs uppercase tracking-wider text-ink-mute">
-                  {e.period}
-                </p>
+                <div className="mt-1.5 flex max-w-md items-center justify-between gap-3 font-mono text-xs uppercase tracking-wider text-ink-mute">
+                  <span className="text-rose">{e.org}</span>
+                  <span>{e.period}</span>
+                </div>
                 <p className="mt-3 max-w-md leading-relaxed text-ink-soft">
                   {e.blurb}
                 </p>
